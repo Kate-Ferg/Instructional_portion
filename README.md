@@ -21,6 +21,7 @@ stroke-dasharray: 7500;
 stroke-dashoffset: 7500;
 ```
 These two parameters are what will help us create the line drawing effect. The value of each parameter will increase or decrease depending on how long your path is. The goal is to have one very large stroke that covers the entire path.
+
 4. Directly after the last step, we will declare the animation itself by adding:
 ```
   animation: draw 25s linear alternate;
