@@ -22,8 +22,14 @@ stroke-dashoffset: 7500;
 ```
 These two parameters are what will help us create the line drawing effect. The value of each parameter will increase or decrease depending on how long your path is. The goal is to have one very large stroke that covers the entire path.
 
-4. Directly after the last step, we will declare the animation itself by adding:
+4. Directly after the last step, we will define the animation itself by adding:
 ```
   animation: draw 25s linear alternate;
 ```
-"Draw" is the name of the animation (you could name it whatever you want). We will be using the name of the animation to reference when adding a keyframe later. "25s" is how long it will take the animation to run from start to finish. You could increase or decrease this value depending on how fast you wan the animation to go. "Alternate"
+"Draw" is the name of the animation (you could name it whatever you want). We will be using the name of the animation to reference when adding a keyframe later. "25s" is how long it will take the animation to run from start to finish. You could increase or decrease this value depending on how fast you wan the animation to go. "Alternate" doesn't really apply to this particular situation, but it can be used to reverse the direction of the animation every other cycle if you have an animation that repeats.
+
+5. Now we're going to add the following directly under the last step:
+```
+animation-delay: 1s;
+```
+This part of the code is pretty self explanitory, but it will delay the start of the animation by however long the value you insert indicates.
