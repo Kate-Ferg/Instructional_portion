@@ -33,3 +33,9 @@ These two parameters are what will help us create the line drawing effect. The v
 animation-delay: 1s;
 ```
 This part of the code is pretty self explanitory, but it will delay the start of the animation by however long the value you insert indicates.
+
+6. The final component we will add to the "link" selection in styles.css is the following:
+7. ```
+8. animation-fill-mode: forwards;
+9. ```
+10. Setting the "animation-fill-mode" to "forwards" extends the styles from the last keyframe of your animation to play beyond the duration of the animation. So, basically it tells the animation to remain in its final position after playing through. This way the viewer will see the complete portrait that was drawn for the rest of the time they are on the page.
