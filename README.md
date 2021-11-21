@@ -11,7 +11,7 @@ First, it is important to note that these instructions will be decribing how to 
 - So to begin, open up Adobe Illustrator and create a graphic. Try to plan ahead of time how you would like your illustration to be animated. This is because each complete shape and path that you make can be animated seperately, so pay attention to each object or layer that you have. 
 - Once you have your graphic completed, use the artboard tool to crop the artboard down to fit snuggly against the sides of the illustration.
 - You will need to save the file as an SVG now to get the code needed to put into index.html. So go to File > Save As, and then select "SVG" for the format. Click "Save", and then in the next window that pops up you'll want to click the button that says "SVG Code". The code should then open up in a text editor.
-- Optionally, you may want to run this code through an SVG optimiser to eliminate unneccessary information, making the code cleaner and quicker to load. To do this you can copy and paste the code into a resourece found at https://jakearchibald.github.io/svgomg/. Just paste the code into the "Paste Markup" area and click the "copy as text" button found right above the download button.
+- Optionally, you may want to run this code through an SVG optimiser to eliminate unneccessary information, making the code cleaner and quicker to load. To do this you can copy and paste the code into this [resource](https://jakearchibald.github.io/svgomg/). Just paste the code into the "Paste Markup" area and click the "copy as text" button found right above the download button.
 - Now you can paste this text into the sample index.html file of this project (make sure you delete the code for the sample SVG that's already in here).
 
 2. Now you can begin styling the SVG. If using your own SVG, start by adding classes or ids to each individual shape/path you want to animate in index.html. For the sample exercise, we will be animating a line drawing of a girl so that it appears to draw itself. Go ahead and add a class of "line" to the path in index.html.
@@ -40,11 +40,12 @@ animation-fill-mode: forwards;
 ```
 Setting the "animation-fill-mode" to "forwards" extends the styles from the last keyframe of your animation to play beyond the duration of the animation. So, basically it tells the animation to remain in its final position after playing through. This way the viewer will see the complete portrait that was drawn for the rest of the time they are on the page.
 
-7. Now we need to create a keyframe for our "draw" animation as I mentiioned in step four. To do this you must use the @keyframes rule, so go ahead and past this into the sample styles.css page:
+7. Now we need to create a keyframe for our "draw" animation as I mentiioned in step four. To do this you must use the @keyframes rule with the name of the animation, so go ahead and paste this into the sample styles.css file:
 ```
 @keyframes draw { 
 }
 ```
+
 
 8. We need to add a couple parameters within this keyframe now, parameters that will define the starting and ending positions for the animation. The starting position will be defined using "from {}". Place the following code within the curly braces of "@keyframe":
 ```
@@ -52,4 +53,12 @@ Setting the "animation-fill-mode" to "forwards" extends the styles from the last
     stroke-dashoffset: 7500;
   }
   ```
+Within the braces we will again set the stroke-dashoffset to 7500 so that none of the SVG path will appear at the beginning of the animation. Again, if using your own SVG you amy need to adjust this number until none of the path is showing.
 
+9. Finally, there's one last piece of code to add directly after "from {}" but still inside of the @keyframe braces. This will define the ending point we want our path to move towards in the animation:
+```
+  to {
+    stroke-dashoffset: 0;
+  }
+  ```
+Now the stroke-dashoffset is set to 0 so that the entire path will appear. The "from {}" and "to {}" rules within a keyframe can be used for all kinds of transitions that make a shape move from one position to another.
