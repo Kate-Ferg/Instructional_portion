@@ -1,4 +1,4 @@
-# Instructional Portion
+# Animated SVG: Instructional Portion
 
 Just as a little background information, SVG stands for scalable vector graphics. SVGs are useful because they have a smaller file sizes than raster based images, will render clearly no matter the size, and can be styled using CSS. I recommended going through these instructions first using the provided sample material (so skip the "create your own SVG" steps). Then once you feel comfortable, go back through the instructions, but this time try and create your own SVG to use.
 
