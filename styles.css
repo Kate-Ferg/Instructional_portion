@@ -1,0 +1,22 @@
+.line {
+  stroke-dasharray: 7500;
+  stroke-dashoffset: 7500;
+  animation: draw 25s linear alternate;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes draw {
+  from {
+    stroke-dashoffset: 7500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+svg {
+  background-color: rosybrown;
+  height: 1600px;
+  margin-left: 830px;
+  width: 1200px;
+}
