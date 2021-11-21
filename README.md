@@ -39,3 +39,17 @@ This part of the code is pretty self explanitory, but it will delay the start of
 animation-fill-mode: forwards;
 ```
 Setting the "animation-fill-mode" to "forwards" extends the styles from the last keyframe of your animation to play beyond the duration of the animation. So, basically it tells the animation to remain in its final position after playing through. This way the viewer will see the complete portrait that was drawn for the rest of the time they are on the page.
+
+7. Now we need to create a keyframe for our "draw" animation as I mentiioned in step four. To do this you must use the @keyframes rule, so go ahead and past this into the sample styles.css page:
+```
+@keyframes draw { 
+}
+```
+
+8. We need to add a couple parameters within this keyframe now, parameters that will define the starting and ending positions for the animation. The starting position will be defined using "from {}". Place the following code within the curly braces of "@keyframe":
+```
+  from {
+    stroke-dashoffset: 7500;
+  }
+  ```
+
