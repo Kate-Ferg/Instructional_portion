@@ -63,5 +63,5 @@ Within the braces we will again set the stroke-dashoffset to 7500 so that none o
   ```
 Now the stroke-dashoffset is set to 0 so that the entire path will appear. The "from {}" and "to {}" rules within a keyframe can be used for all kinds of transitions that make a shape move from one position to another.
 
-## You made it, great job!
-The portait should now draw itself when the page is loaded and then remain in its ending position as the full portrait.
+## You made it, nice work!
+The portait should now draw itself when the page is loaded and then remain in its ending position as the full portrait. If you haven't already, now try and experiment with your own SVG and perhaps some different transitions!
